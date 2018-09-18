@@ -594,4 +594,4 @@ int main(int argc, char**argv) {
 
 YUV相比RGB的优点是和黑白兼容，而且它的变种容易压缩带宽，它被广泛用于目前各种图像和视频编码中。掌握它是开始图像和视频编程的基础
 
-注：本文大部分内容是来自YUV的![wiki](https://en.wikipedia.org/wiki/YUV#Y.E2.80.B2UV420p_.28and_Y.E2.80.B2V12_or_YV12.29_to_RGB888_conversion), 大家也可以自行查看原文。
+注：本文大部分内容是来自YUV的[wiki](https://en.wikipedia.org/wiki/YUV#Y.E2.80.B2UV420p_.28and_Y.E2.80.B2V12_or_YV12.29_to_RGB888_conversion), 大家也可以自行查看原文。
