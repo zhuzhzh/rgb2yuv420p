@@ -289,10 +289,10 @@ clmap 表示限定值在[0,255]之间
 $$
 C = Y' - 16 \\\
 D = U - 128 \\\
-E = V - 128
-R = clamp( (298 \times C + 408 \times E + 128) >> 8 )
-G = clamp( (298 \times C - 100 \times D - 208 \times E +128) >> 8 )
-B = clamp( (298 \times C + 516 \times D +128) >> 8 )
+E = V - 128 \\\
+R = clamp( (298 \times C + 408 \times E + 128) >> 8 ) \\\
+G = clamp( (298 \times C - 100 \times D - 208 \times E +128) >> 8 ) \\\
+B = clamp( (298 \times C + 516 \times D +128) >> 8 ) \\\
 $$
 
 ### Y'UV422 to RGB888
