@@ -32,7 +32,7 @@ int main(int argc, char**argv) {
 
 	size_t nread;
 
-	FILE * fin=fopen("yuv.in", "r");
+	FILE * fin=fopen(din, "r");
 	FILE * fout=fopen(dout, "w+");
 
 	if(fin) {

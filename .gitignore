@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+output_ref.webm
+rgb0.in
+simple_decoder
+simple_encoder
+torgb
+tovpx
+tovpx.c
+toyuv
+vp9_lossless_encoder
+vp9_spatial_svc_encoder
+yuv1.in

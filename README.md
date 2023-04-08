@@ -61,17 +61,21 @@ YV12格式与IYUV类似，每个像素都提取Y，在UV提取时，将图像2 x
 ### YUV与RGB的转换公式
 
 $$
+\begin{align}
 Y = 0.299 \times R + 0.587 \times G + 0.114 \times B \\\
 U = -0.169 \times R - 0.331 \times G + 0.5 \times B + 128 \\\
 V = 0.5 \times R - 0.419 \times G - 0.081 \times B + 128 
+\end{align}
 $$
 
 YUV的取值范围：
 
 $$
+\begin{align}
 Y \in [0,255] \\\
 U \in [0,255] \\\
 V \in [0,255]
+\end{align}
 $$
 
 反过来，从YUV得到RGB，公式如下
@@ -87,6 +91,7 @@ $$
 用矩阵表示法，表示如下：
 
 $$
+\begin{align}
 \begin{bmatrix}
 Y \\
 U \\
@@ -104,9 +109,11 @@ B
 128 \\
 128
 \end{bmatrix}
+\end{align}
 $$
 
 $$
+\begin{align}
 \begin{bmatrix}
 R \\
 G \\
@@ -120,6 +127,7 @@ Y \\
 U-128 \\
 V-128
 \end{bmatrix}
+\end{align}
 $$
 
 ### Y'UV与RGB转换
@@ -127,6 +135,7 @@ $$
 SDTV(standard-definition television) with BT.601定义公式如下：
 
 $$
+\begin{align}
 \begin{bmatrix}
 Y' \\
 U \\
@@ -140,9 +149,11 @@ R \\
 G \\
 B
 \end{bmatrix}
+\end{align}
 $$
 
 $$
+\begin{align}
 \begin{bmatrix}
 R \\
 G \\
@@ -156,11 +167,13 @@ Y' \\
 U \\
 V
 \end{bmatrix}
+\end{align}
 $$
 
 HDTV with BT.709定义公式如下：
 
 $$
+\begin{align}
 \begin{bmatrix}
 Y' \\
 U \\
@@ -174,9 +187,11 @@ R \\
 G \\
 B
 \end{bmatrix}
+\end{align}
 $$
 
 $$
+\begin{align}
 \begin{bmatrix}
 R \\
 G \\
@@ -190,6 +205,7 @@ Y' \\
 U \\
 V
 \end{bmatrix}
+\end{align}
 $$
 
 
@@ -197,11 +213,13 @@ $$
 
 ### studio swing for BT.601
 
-$ Y' \in [16,235]$
-$ U/V \in [16,240]$
+$Y' \in [16,235]$
+$U/V \in [16,240]$
 
 **step 1**
+
 $$
+\begin{align}
 \begin{bmatrix}
 Y' \\
 U \\
@@ -215,20 +233,25 @@ R \\
 G \\
 B
 \end{bmatrix}
+\end{align}
 $$
 
 **step 2**
 $$
+\begin{align}
 Yt' = (Y' + 128) >> 8 \\\
 Ut = (U + 128) >> 8 \\\
 Vt = (V + 128) >> 8
+\end{align}
 $$
 
 **step 3**
 $$
+\begin{align}
 Yu' = Yt' + 16 \\\
 Uu = Ut + 128 \\\
 Vu = Vt + 128
+\end{align}
 $$
 
 ### Full swing for BT.601
@@ -236,6 +259,7 @@ $Y'/U/V \in [0,255]$
 
 **step 1**
 $$
+\begin{align}
 \begin{bmatrix}
 Y' \\
 U \\
@@ -249,36 +273,45 @@ R \\
 G \\
 B
 \end{bmatrix}
+\end{align}
 $$
 
 **step 2**
 $$
+\begin{align}
 Yt' = (Y' + 128) >> 8 \\\
 Ut = (U + 128) >> 8 \\\
 Vt = (V + 128) >> 8
+\end{align}
 $$
 
 **step 3**
 $$
+\begin{align}
 Yu' = Yt' + 16 \\\
 Uu = Ut + 128 \\\
 Vu = Vt + 128
+\end{align}
 $$
 
 ### Y'UV444 to RGB888
 
 $$
+\begin{align}
 Y' = 0.299 \times R + 0.587 \times G + 0.114 \times B \\\
 U = -0.147 \times R - 0.289 \times G + 0.436 \times B \\\
 V = 0.615 \times R - 0.515 \times G - 0.100 \times B
+\end{align}
 $$
 
 转成定点：
 
 $$
+\begin{align}
 Y' = ((66 \times R + 129 \times G + 25 \times B +128) >> 8) + 16 \\\
 U = ((-38 \times R - 74 \times G + 112 \times B +128) >> 8) + 128 \\\
 V = ((112 \times R - 94 \times G - 18 \times B + 128) >> 8 ) +128
+\end{align}
 $$
 
 ### RGB888 to Y'UV
@@ -287,12 +320,14 @@ $$
 clmap 表示限定值在[0,255]之间
 
 $$
+\begin{align}
 C = Y' - 16 \\\
 D = U - 128 \\\
 E = V - 128 \\\
 R = clamp( (298 \times C + 408 \times E + 128) >> 8 ) \\\
 G = clamp( (298 \times C - 100 \times D - 208 \times E +128) >> 8 ) \\\
 B = clamp( (298 \times C + 516 \times D +128) >> 8 ) \\\
+\end{align}
 $$
 
 ### Y'UV422 to RGB888
