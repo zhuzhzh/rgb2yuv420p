@@ -212,9 +212,12 @@ $$
 ## 数值近似
 
 ### studio swing for BT.601
-
-$Y' \in [16,235]$
-$U/V \in [16,240]$
+$$
+\begin{align}
+Y' \in [16,235] \\\
+$U/V \in [16,240]
+\end{align}
+$$
 
 **step 1**
 
@@ -237,6 +240,7 @@ B
 $$
 
 **step 2**
+
 $$
 \begin{align}
 Yt' = (Y' + 128) >> 8 \\\
@@ -246,6 +250,7 @@ Vt = (V + 128) >> 8
 $$
 
 **step 3**
+
 $$
 \begin{align}
 Yu' = Yt' + 16 \\\
@@ -255,9 +260,11 @@ Vu = Vt + 128
 $$
 
 ### Full swing for BT.601
+
 $Y'/U/V \in [0,255]$
 
 **step 1**
+
 $$
 \begin{align}
 \begin{bmatrix}
