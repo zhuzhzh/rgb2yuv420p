@@ -344,7 +344,8 @@ $$
 ### Y'UV422 to RGB888
 
 Y'UV422在内存中的存储方式如下：
-![350px-Yuv422_yuy2.svg](http://ows8v7qop.bkt.clouddn.com/350px-Yuv422_yuy2.svg.png)
+![350px-Yuv422_yuy2 svg](https://user-images.githubusercontent.com/14127098/230731401-c80274eb-3d6e-4c5f-b4c8-4d12577b30e6.png)
+
 
 所以读取4bytes， 输出6bytes(2 pixels)
 
@@ -360,7 +361,8 @@ rgb1 = Y'UV444toRGB888(y1, u, v);
 ### Y'UV420p (I420) to RGB888
 
 Y'UV420p的采样方式如下：
-![800px-Yuv420.svg](http://ows8v7qop.bkt.clouddn.com/800px-Yuv420.svg.png)
+![800px-Yuv420 svg](https://user-images.githubusercontent.com/14127098/230731377-e73e022c-1a89-49e2-81d9-35fa28d744dc.png)
+
 
 获取坐标为(x,y)像素点的y,u,v方法如下：
 
