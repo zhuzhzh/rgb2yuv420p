@@ -261,7 +261,9 @@ $$
 
 ### Full swing for BT.601
 
-$Y'/U/V \in [0,255]$
+$$
+Y'/U/V \in [0,255]
+$$
 
 **step 1**
 
@@ -284,6 +286,7 @@ B
 $$
 
 **step 2**
+
 $$
 \begin{align}
 Yt' = (Y' + 128) >> 8 \\\
@@ -293,6 +296,7 @@ Vt = (V + 128) >> 8
 $$
 
 **step 3**
+
 $$
 \begin{align}
 Yu' = Yt' + 16 \\\
