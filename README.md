@@ -215,7 +215,7 @@ $$
 $$
 \begin{align}
 Y' \in [16,235] \\\
-$U/V \in [16,240]
+U/V \in [16,240]
 \end{align}
 $$
 
